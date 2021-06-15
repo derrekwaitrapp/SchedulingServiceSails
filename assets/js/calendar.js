@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
           title: block.title,
           start: block.start,
           end: block.end
-        }
+        };
       });
 
-      console.log(blocks)
+      console.log(blocks);
 
       var calendarEl = document.getElementById('calendar');
       var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         events: blocks
       });
-      // calendarInstance.createSchedules(schedule.blocks);
       calendar.render();
     }
   };
