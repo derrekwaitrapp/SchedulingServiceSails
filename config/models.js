@@ -71,7 +71,6 @@ module.exports.models = {
   attributes: {
     createdAt: { type: 'number', autoCreatedAt: true, },
     updatedAt: { type: 'number', autoUpdatedAt: true, },
-    publishedAt: { type: 'number', columnType: 'datetime' },
     company: { model: "company" },
     id: { type: 'number', autoIncrement: true, },
     // id: {

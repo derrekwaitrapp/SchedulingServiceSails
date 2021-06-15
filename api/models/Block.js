@@ -9,16 +9,21 @@
 module.exports = {
 
   attributes: {
+
     title: {
       type: "string"
     },
     start: {
-      type: 'string',
-      columnType: 'datetime'
+      type: 'ref',
+      columnType: 'timestamp'
     },
     end: {
-      type: 'string',
-      columnType: 'datetime'
+      type: 'ref',
+      columnType: 'timestamp'
+    },
+    publishedAt: {
+      type: 'ref',
+      columnType: 'timestamp'
     },
     claimedByUser: {
       model: "user"

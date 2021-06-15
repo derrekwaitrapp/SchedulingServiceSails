@@ -70,7 +70,9 @@ module.exports = {
       * https://sailsjs.com/config/datastores                                     *
       *                                                                           *
       ****************************************************************************/
-      // ssl: true,
+      adapter: 'sails-postgresql',
+      url: 'postgres://fhtuhsrxvprcpb:0cd843e4965552cd8c5f253e11a4c734d7d08b74448934293e1f70445124e3d5@ec2-54-197-100-79.compute-1.amazonaws.com:5432/d8k8depfq6gg3b',
+      ssl: { rejectUnauthorized: false },
 
     },
 
