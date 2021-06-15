@@ -12,9 +12,11 @@ module.exports = {
       .findOne(id)
       .populateAll()
       .then(function (submarket){
-        let blocks = Block.find({ "subMarket": submarket.id })
+        let blocks = Block
+          .find({ "subMarket": submarket.id })
           .populate('claimedByUser')
           .populate('company')
+          .sort('id ASC')
           .then(function (blocks){
             return blocks;
           });
