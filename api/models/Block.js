@@ -11,7 +11,7 @@ module.exports = {
   attributes: {
 
     title: {
-      type: "string"
+      type: 'string'
     },
     start: {
       type: 'ref',
@@ -25,11 +25,12 @@ module.exports = {
       type: 'ref',
       columnType: 'timestamp'
     },
-    claimedByUser: {
-      model: "user"
+    claimedByUsers: {
+      collection: 'user',
+      via: 'blocks'
     },
     subMarket: {
-      model: "submarket"
+      model: 'submarket'
     }
   },
 

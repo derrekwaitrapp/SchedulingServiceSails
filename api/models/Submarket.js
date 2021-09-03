@@ -10,17 +10,17 @@ module.exports = {
   attributes: {
 
     name: {
-      type: "string"
+      type: 'string'
     },
     description: {
-      type: "string"
+      type: 'string'
     },
     market: {
-      model: "market"
+      model: 'market'
     },
     blocks: {
-      collection: "block",
-      via: "subMarket"
+      collection: 'block',
+      via: 'subMarket'
     }
   },
 

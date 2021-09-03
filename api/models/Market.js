@@ -10,18 +10,18 @@ module.exports = {
   attributes: {
 
     name: {
-      type: "string"
+      type: 'string'
     },
     description: {
-      type: "string"
+      type: 'string'
     },
     submarkets: {
-      collection: "submarket",
-      via:"market"
+      collection: 'submarket',
+      via: 'market'
     },
     companies: {
-      via: "markets",
-      collection: "company"
+      via: 'markets',
+      collection: 'company'
     }
 
   }

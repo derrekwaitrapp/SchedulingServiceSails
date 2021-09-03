@@ -18,5 +18,9 @@ module.exports.policies = {
   ***************************************************************************/
 
   // '*': true,
+  // '*': 'isDriver', // Require user to be logged in to access any action not otherwise mapped in this config
+  // 'BlockController': {
+  //   'find': true    // Always allow access to the user login action
+  // }
 
 };

@@ -13,8 +13,8 @@ module.exports = {
       .populateAll()
       .then(function (submarket){
         let blocks = Block
-          .find({ "subMarket": submarket.id })
-          .populate('claimedByUser')
+          .find({ subMarket: submarket.id })
+          .populate('claimedByUsers')
           .populate('company')
           .sort('id ASC')
           .then(function (blocks){
@@ -23,7 +23,7 @@ module.exports = {
         return [submarket, blocks];
       })
       .spread(function (submarket, blocks){
-        submarket.blocks = blocks; // It will work now
+        submarket.blocks = blocks;
         res.json(submarket);
       }).catch(function (err){
         return res.serverError(err);
@@ -35,7 +35,7 @@ module.exports = {
     const {id} = req.params;
     const Blocks = await Block
       .find({"subMarket":id})
-      .populate(['claimedByUser', 'company', 'subMarket'])
+      .populate(['claimedByUser', 'company', 'subMarket']);
     const response = Blocks;
     res.send(response);
   }

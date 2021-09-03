@@ -9,14 +9,14 @@ module.exports = {
 
   attributes: {
     name: {
-      type: "string",
+      type: 'string',
     },
     description: {
-      type: "string"
+      type: 'string'
     },
     markets: {
-      collection: "market",
-      via: "companies"
+      collection: 'market',
+      via: 'companies'
     }
   }
 

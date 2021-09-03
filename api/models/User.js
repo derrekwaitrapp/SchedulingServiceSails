@@ -9,15 +9,15 @@ module.exports = {
 
   attributes: {
     name: {
-      type: "string"
+      type: 'string'
     },
     role: {
-      type: "string",
-      defaultsTo: "driver"
+      type: 'string',
+      defaultsTo: 'driver'
     },
     blocks: {
-      collection: "block",
-      via: "claimedByUser"
+      collection: 'block',
+      via: 'claimedByUsers'
     }
   },
 

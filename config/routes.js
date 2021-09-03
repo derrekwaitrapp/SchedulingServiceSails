@@ -20,7 +20,8 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/homepage' },
-  '/blocks/:id/dropClaim': 'BlockController.dropClaim',
+  '/blocks/:id/dropClaim/:userId': 'BlockController.dropClaim',
+  'post /blocks/:id/claim/:userId': 'BlockController.claim',
   '/subMarkets/:id/blocks': 'SubmarketController.getSubMarketBlocks',
 
 
